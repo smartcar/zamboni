@@ -1,0 +1,29 @@
+{
+  "name": "@smartcar/zamboni",
+  "version": "0.0.0",
+  "description": "Combines config files for eslint, prettier, husky and lint-staged into one package.",
+  "homepage": "https://github.com/smartcar/zamboni#readme",
+  "bugs": {
+    "url": "https://github.com/smartcar/zamboni/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartcar/zamboni.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Smartcar",
+    "email": "hello@smartcar.com",
+    "url": "https://smartcar.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=12.14.0",
+    "npm": ">=6.13.4"
+  }
+}
