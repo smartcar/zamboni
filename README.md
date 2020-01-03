@@ -1,4 +1,4 @@
-# @smartcar/zamboni [![Build Status][ci-image]][ci-url]
+# @smartcar/zamboni [![Build Status][ci-image]][ci-url] [![Greenkeeper][gk-image]][gk-url]
 
 > Combines Configuration files for ESlint, Prettier, and Husky into one convenient package.
 
@@ -58,3 +58,5 @@ MIT © [Smartcar, Inc.](https://smartcar.com)
 
 [ci-url]: https://travis-ci.com/smartcar/zamboni
 [ci-image]: https://img.shields.io/travis/com/smartcar/zamboni/master.svg?style=flat-square
+[gk-url]: https://greenkeeper.io
+[gk-image]: https://badges.greenkeeper.io/smartcar/zamboni.svg?style=flat-square
