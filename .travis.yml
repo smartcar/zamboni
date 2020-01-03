@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - '12'
+
+cache:
+  directories:
+    - '$HOME/.npm'
+
+if: tag IS blank # do not build tags
+
+notifications:
+  slack:
+    secure: 'iXhanmStbi1IqCzw3GW+7iJQx1DoQlDqapnfUhsMslzGHkFWxp+zlAMMHmz0nVRQlfoWHEQ6aMvFyZFmXsa14XGcvgbUvWj/0U6Y2v/CEPxbhG8Bl23Le4DP5CWsXsLNO7pyaTmAC/8haqxpIhZartsebMPFK73eScQPON1YEj+HwUKMafhBkJOO//Xcbo+JjiJPWmtzKKoLFvdLMSGhZBmvb0rE6jKa46vrjxhYHoFpYN75mLCoeyrmcydBa7sPuhlXIxoqFo5AZ/yNH2PqHmosK3RvQKWdJZY6C7w81c1q2Nl8Piq2pEu9uIT6j2cJlfygcN6E/ZG3a6zK/DIhyeZK0c9xjc5gvA72zQsmjV70oqSgy4QZR4wEEthmtRbphPCW8RoVf0CE0APk3RA2NfCcaAwgjDGPB5/mKLdvum39Ne02Co3sA+0XJp+/ZWh3+vFkOCDbT4SQ1PsMWs+kf0KAlqPLIoLc+LYr23ntm/MaX4MnCiZwwgrDenSXspUMt0goU+2wsc5y1hXoMIvGgLoWaOzqYvjg+h+dzMWwauh1PtmrnGTePD8BzCv7w890AIIrUZzB20NL0hY1NHcZCae93hSIHVCNXiMMTE2xLF7K8QnRWjdtakgHPaQFs6sQV+eWiURfz/QcO+3rh+EeTWDjtxqDysp9qP49XWylp9Y='
+
+install:
+  - npm ci --ignore-scripts
+  - env -i PATH=$PATH GH_TOKEN='' npm rebuild
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run lint
+
+    - stage: publish
+      node_js: '12'
+      script: NPM_TOKEN=$GH_TOKEN semantic-release
