@@ -1,21 +1,13 @@
 'use strict';
 
-const task = function(command) {
-  if (Array.isArray(command)) {
-    return command.push('git add');
-  }
-
-  return [command, 'git add'];
-};
-
 module.exports = {
   // prettier
-  '*.md': task('prettier --write'),
-  '*.{yaml,yml}': task('prettier --write'),
-  '!(package).json': task('prettier --write'),
+  '*.md': 'prettier --write',
+  '*.{yaml,yml}': 'prettier --write',
+  '!(package).json': 'prettier --write',
 
-  'package.json': task('sort-package-json'),
+  'package.json': 'sort-package-json',
 
   // eslint
-  '*.{js,jsx}': task('eslint --fix'),
+  '*.{js,jsx}': 'eslint --fix',
 };

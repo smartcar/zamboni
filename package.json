@@ -28,7 +28,7 @@
     "@smartcar/eslint-config": "^4.0.2",
     "eslint": "^6.8.0",
     "husky": "^4.0.2",
-    "lint-staged": "^9.4.2",
+    "lint-staged": "^10.0.3",
     "prettier": "~1.19.1",
     "sort-package-json": "^1.31.0"
   },
