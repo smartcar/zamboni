@@ -17,12 +17,13 @@ install:
   - npm ci --ignore-scripts
   - env -i PATH=$PATH GH_TOKEN='' npm rebuild
 
-jobs:
-  include:
-    - stage: test
-      script:
-        - npm run lint
+script:
+  - npm run lint
 
-    - stage: publish
-      node_js: '12'
-      script: NPM_TOKEN=$GH_TOKEN semantic-release
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: NPM_TOKEN=$GH_TOKEN semantic-release
+  on:
+    node_js: '12'
+    all_branches: true
