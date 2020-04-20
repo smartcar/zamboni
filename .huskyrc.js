@@ -1,3 +1,8 @@
 'use strict';
 
-module.exports = require('.').config.husky;
+module.exports = {
+  hooks: {
+    'pre-commit':
+      'lint-staged && eslint --no-eslintrc --config configs/eslintrc-for-all-files.js --no-inline-config .',
+  },
+};
