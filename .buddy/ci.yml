@@ -9,9 +9,8 @@
   actions:
   - action: "Build dependencies"
     type: "BUILD"
-    region: "us-west-2"
-    docker_image_name: "smartcar/base"
-    docker_image_tag: "14"
+    docker_image_name: "node"
+    docker_image_tag: "14.21.2"
     execute_commands:
     - "npm ci --ignore-scripts"
     - "npm rebuild"
@@ -20,4 +19,3 @@
     - "/:/buddy/zamboni"
     cache_base_image: true
     shell: "BASH"
-    integration_hash: "3DmJqAMrlNbWp9nJdyg5Kx2n6z"
