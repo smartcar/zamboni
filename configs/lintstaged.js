@@ -9,5 +9,5 @@ module.exports = {
   'package.json': 'sort-package-json',
 
   // eslint
-  '*.{js,jsx}': 'eslint --fix',
+  '*.{js,jsx}': 'eslint --cache --fix',
 };
