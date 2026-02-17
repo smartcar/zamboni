@@ -29,11 +29,11 @@
     "eslint": "^8.57.1",
     "husky": "^4.0.2",
     "lint-staged": "^10.0.3",
-    "prettier": "^2.2.0",
+    "prettier": "^3.8.1",
     "sort-package-json": "^1.31.0"
   },
   "devDependencies": {
-    "semantic-release": "^17.0.0"
+    "semantic-release": "^24.2.9"
   },
   "engines": {
     "node": ">=20",
