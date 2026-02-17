@@ -1,21 +1,21 @@
-- pipeline: "CI"
-  on: "EVENT"
+- pipeline: 'CI'
+  on: 'EVENT'
   events:
-  - type: "PUSH"
-    refs:
-    - "refs/heads/*"
-  priority: "NORMAL"
+    - type: 'PUSH'
+      refs:
+        - 'refs/heads/*'
+  priority: 'NORMAL'
   fail_on_prepare_env_warning: true
   actions:
-  - action: "Build dependencies"
-    type: "BUILD"
-    docker_image_name: "node"
-    docker_image_tag: "14.21.2"
-    execute_commands:
-    - "npm ci --ignore-scripts"
-    - "npm rebuild"
-    - "npm run lint"
-    volume_mappings:
-    - "/:/buddy/zamboni"
-    cache_base_image: true
-    shell: "BASH"
+    - action: 'Build dependencies'
+      type: 'BUILD'
+      docker_image_name: 'node'
+      docker_image_tag: '22.13.1-bookworm'
+      execute_commands:
+        - 'npm ci --ignore-scripts'
+        - 'npm rebuild'
+        - 'npm run lint'
+      volume_mappings:
+        - '/:/buddy/zamboni'
+      cache_base_image: true
+      shell: 'BASH'
