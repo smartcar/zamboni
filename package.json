@@ -25,8 +25,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@smartcar/eslint-config": "^4.3.2",
-    "eslint": "^7.3.1",
+    "@smartcar/eslint-plugin": "^1.0.2",
+    "eslint": "^8.57.1",
     "husky": "^4.0.2",
     "lint-staged": "^10.0.3",
     "prettier": "^2.2.0",
