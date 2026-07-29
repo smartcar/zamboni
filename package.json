@@ -33,7 +33,7 @@
     "sort-package-json": "^1.31.0"
   },
   "devDependencies": {
-    "semantic-release": "^24.2.9"
+    "semantic-release": "^25.0.8"
   },
   "engines": {
     "node": ">=20",
